@@ -6,7 +6,7 @@ repository: https://github.com/VargSupercolony/subquery-test
 schema:
   file: ./schema.graphql
 network:
-  genesisHash: '0xaad0a356583639efb3fe531f4519aca53cfbc4a8c3b736eb137c7dce7bce7ca8'
+  genesisHash: '0x4fb18bcea287ce4d014e093bbb028760b6d6e9c935709d07f38039c7b12d6d6e'
   endpoint: wss://ws.jupiter-poa.patract.cn/
 dataSources:
   - kind: substrate/Runtime
