@@ -6,20 +6,15 @@ repository: https://github.com/VargSupercolony/subquery-test
 schema:
   file: ./schema.graphql
 network:
-  genesisHash: '0x91b171bb158e2d3848fa23a9f1c25182fb8e20313b2c1eb49219da7a70ce90c3'
-  endpoint: wss://polkadot.api.onfinality.io/public-ws
+  genesisHash: '0xaad0a356583639efb3fe531f4519aca53cfbc4a8c3b736eb137c7dce7bce7ca8'
+  endpoint: wss://ws.jupiter-poa.patract.cn/
 dataSources:
   - kind: substrate/Runtime
     startBlock: 1
     mapping:
       file: ./dist/index.js
       handlers:
-        - handler: handleBlock
-          kind: substrate/BlockHandler
         - handler: handleEvent
           kind: substrate/EventHandler
           filter:
-            module: balances
-            method: Deposit
-        - handler: handleCall
-          kind: substrate/CallHandler
+            module: contracts
