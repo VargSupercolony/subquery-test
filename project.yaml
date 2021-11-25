@@ -16,3 +16,6 @@ dataSources:
       handlers:
         - handler: handleEvent
           kind: substrate/EventHandler
+          filter:
+            module: contracts
+            methods: ContractEmitted
